@@ -2,11 +2,11 @@
   <div class="field">
     <div class="container">
       <div class="row">
-        <div class="col-6" v-for="(item, index) of melodies" :key="item.id" v-if="(index < page+8) & (index >= page) "  @click="playMusic()">
-          <div class="play-icon">
+        <div class="col-6" v-for="(item, index) of melodies" :key="item.id"   @click="playMusic()">
+          <div class="play-icon" v-if="(index < page+8) & (index >= page) ">
             <div class="play-triangle"></div>
           </div>
-          <div class="melody"> <p> {{item.name}}</p> </div>          
+          <div class="melody" v-if="(index < page+8) & (index >= page) "> <p> {{item.name}}</p> </div>          
         </div>
       </div>
     </div>
@@ -29,7 +29,7 @@ export default {
   methods:{
     playMusic(){
       var audio = new Audio(); 
-      audio.src = '../Music/HappyBirth.mp3'; 
+      audio.src = './src/components/Music/HappyBith.mp3'; 
       audio.autoplay = true;
     }
   }
