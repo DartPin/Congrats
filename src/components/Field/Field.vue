@@ -2,7 +2,7 @@
   <div class="field">
     <div class="container">
       <div class="row">
-        <div class="col-6" v-for="item of melodies" :key="item.id">
+        <div class="col-6" v-for="(item, index) of melodies" :key="item.id" v-if="(index < page+8) & (index >= page) "  @click="playMusic()">
           <div class="play-icon">
             <div class="play-triangle"></div>
           </div>
@@ -18,37 +18,20 @@
 
 export default {
   name: "Field",
+  props:["page", "melodies"],
   components:{    
   },
   data() {
     return {
-      melodies: [
-        {
-          name: "Поздравляю с днем Рождения!! желаю счастье в личной жизни!"
-        },
-        {
-          name: "Поздравляю с днем Рождения!!"
-        },
-        {
-          name: "Поздравляю с днем Рождения!!"
-        },
-        {
-          name: "Поздравляю с днем Рождения!!"
-        },
-        {
-          name: "Поздравляю с днем Рождения!!"
-        },
-        {
-          name: "Поздравляю с днем Рождения!!"
-        },
-        {
-          name: "Поздравляю с днем Рождения!!"
-        },
-        {
-          name: "Поздравляю с днем Рождения!!"
-        }
-      ]
+     
     };
+  },
+  methods:{
+    playMusic(){
+      var audio = new Audio(); 
+      audio.src = '../Music/HappyBirth.mp3'; 
+      audio.autoplay = true;
+    }
   }
 };
 </script>

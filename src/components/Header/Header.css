@@ -18,4 +18,5 @@
   }
   .menu-item:hover{
     border-bottom: 3px solid yellow;
+    cursor: pointer;
   }

@@ -1,0 +1,35 @@
+.footer{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: #F8F8F8;
+  height: 50px;
+  width: 100%;
+}
+.btn-panel{
+  position: relative;
+  width: 100%;
+  height: 100%;
+ 
+}
+.next{
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(10%, -50%);
+  text-transform: uppercase;
+  box-shadow: 0 1px 1px rgba(0,0,0,0.25), 0 1px 1px rgba(0,0,0,0.22);
+}
+.prev{
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-110%, -50%);
+  text-transform: uppercase;
+  box-shadow: 0 1px 1px rgba(0,0,0,0.25), 0 1px 1px rgba(0,0,0,0.22);
+  border: 0;
+}
+.btn-secondary{
+  background: rgb(175, 174, 174);
+  
+}

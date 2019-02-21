@@ -6,6 +6,9 @@
       <div class="menu-item">популярные</div>
       <div class="menu-item">прикольные</div>
       <div class="menu-item">мужчине</div>
+      <div class="menu-item">женщине</div>
+      <div class="menu-item">любимой</div>
+      <div class="menu-item">любимому</div>
     </div>
   </div>
 </template>
